@@ -103,6 +103,6 @@ Los datos simulados se encuentran en src/data/mockData.js e incluyen:
 
 ## 👤 Autor
 
-** Mayerlin Cubides
-** Paola Arizmendy
-** Johana Peña
+- Mayerlin Cubides
+- Paola Arizmendy
+- Johana Peña
