@@ -76,12 +76,12 @@ export const JUEGOS = [
 export const USUARIOS = [
   {
     id: 1,
-    nombre: "Valentina Cruz",
+    nombre: "Johana Cruz",
     usuario: "@val_cruz",
     nivel: 42,
     puntos: 18750,
     insignia: "🏆",
-    juegosJugados: 38,
+    juegosJugados: 38,  
     racha: 15,
     avatar: "VC",
     color: "#00f5ff",
