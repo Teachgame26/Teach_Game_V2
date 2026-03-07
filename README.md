@@ -1,4 +1,4 @@
-# ⚡ GaMe Zone — Plataforma Estudiantil de Juegos
+# TeachGame — Plataforma Estudiantil de Juegos
 
 Una plataforma educativa interactiva construida con React y Vite, donde los estudiantes pueden explorar juegos educativos, ver el ranking de jugadores y gestionar su perfil.
 
@@ -100,18 +100,9 @@ Los datos simulados se encuentran en src/data/mockData.js e incluyen:
 
 ---
 
-## ✅ Requisitos del Proyecto Cumplidos
 
-✅ Proyecto creado con **Vite**
-✅ Estructura de carpetas con components, views, data y assets
-✅ Componentes separados: Navbar, Footer, JuegosCard, UsuarioCard
-✅ Datos simulados con **mock data** en arreglos
-✅ Uso de **useState** en todos los componentes
-✅ Paso de datos entre componentes mediante **Props**
-✅ Componente ListaUsuarios con 5 usuarios que renderiza un UsuarioCard por cada uno
+## 👤 Autor
 
----
-
-## 👤 Autora
-
-Desarrollado como proyecto estudiantil para la materia de Desarrollo Web.
+Mayerlin Cubides
+Paola Arizmendy
+Johana Peña
