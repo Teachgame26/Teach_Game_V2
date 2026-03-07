@@ -1,0 +1,117 @@
+.juego-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  animation: fadeInUp 0.5s ease both;
+}
+
+.juego-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--card-color, var(--accent-cyan));
+}
+
+/* Badge */
+.juego-card__badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--card-color, var(--accent-cyan));
+  color: #000;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+
+/* Emoji */
+.juego-card__emoji-wrap {
+  background: color-mix(in srgb, var(--card-color, var(--accent-cyan)) 10%, transparent);
+  padding: 32px 20px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+.juego-card__emoji { font-size: 3.5rem; }
+
+/* Body */
+.juego-card__body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.juego-card__meta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.juego-card__categoria {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--card-color, var(--accent-cyan));
+}
+
+.juego-card__dificultad {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.dificultad--facil   { background: rgba(0,255,135,0.15); color: #00ff87; }
+.dificultad--medio   { background: rgba(255,215,0,0.15);  color: #ffd700; }
+.dificultad--dificil { background: rgba(255,45,120,0.15); color: #ff2d78; }
+
+.juego-card__titulo {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.juego-card__descripcion {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.juego-card__stats {
+  display: flex;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.juego-card__btn {
+  background: transparent;
+  border: 1px solid var(--card-color, var(--accent-cyan));
+  color: var(--card-color, var(--accent-cyan));
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-top: auto;
+}
+
+.juego-card__btn:hover {
+  background: var(--card-color, var(--accent-cyan));
+  color: #000;
+}

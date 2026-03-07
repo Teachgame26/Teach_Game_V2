@@ -1,0 +1,201 @@
+.perfil {
+  padding: 48px 24px 80px;
+  max-width: 900px;
+}
+
+/* Tarjeta principal */
+.perfil__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 24px;
+  animation: fadeInUp 0.4s ease both;
+  flex-wrap: wrap;
+}
+
+.perfil__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.perfil__info { flex: 1; min-width: 0; }
+
+.perfil__nombre-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.perfil__nombre {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.perfil__btn-edit {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0.6;
+  transition: opacity var(--transition);
+}
+.perfil__btn-edit:hover { opacity: 1; }
+
+.perfil__handle {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 4px 0 12px;
+}
+
+.perfil__badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.perfil__badge {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Edición de nombre */
+.perfil__edit-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.perfil__input {
+  background: var(--bg-dark);
+  border: 1px solid var(--accent-cyan);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  padding: 6px 12px;
+  outline: none;
+}
+
+.perfil__btn-save  { background: none; border: none; cursor: pointer; font-size: 1.1rem; color: var(--accent-green); }
+.perfil__btn-cancel { background: none; border: none; cursor: pointer; font-size: 1.1rem; color: var(--accent-pink); }
+
+/* Puntos */
+.perfil__puntos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.perfil__puntos-num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.perfil__puntos-lbl {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+}
+
+/* Stats grid */
+.perfil__stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.perfil__stat-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  transition: transform var(--transition);
+  animation: fadeInUp 0.5s ease both;
+}
+.perfil__stat-box:hover { transform: translateY(-3px); }
+
+.perfil__stat-icon { font-size: 1.5rem; }
+
+.perfil__stat-val {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.perfil__stat-lbl {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+/* Historial */
+.perfil__section-titulo {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.perfil__historial-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.perfil__historial-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all var(--transition);
+  animation: fadeInUp 0.5s ease both;
+}
+.perfil__historial-item:hover {
+  border-color: var(--item-color);
+  transform: translateX(4px);
+}
+
+.perfil__historial-emoji { font-size: 1.6rem; }
+.perfil__historial-nombre { font-weight: 600; font-size: 0.95rem; }
+.perfil__historial-cat { font-size: 0.75rem; color: var(--text-muted); }
+
+.perfil__historial-pts {
+  margin-left: auto;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--item-color);
+  font-weight: 700;
+}

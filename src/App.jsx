@@ -1,50 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { usuariosMock } from './data/usuarios'
-import UsuarioCard from './components/UsuarioCard'
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Inicio from "./views/Inicio";
+import Juegos from "./views/Juegos";
+import Ranking from "./views/Ranking";
+import Perfil from "./views/Perfil";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [usuarios, setUsuarios] = useState(usuariosMock)
+  // Estado que controla qué pantalla se muestra
+  const [vistaActiva, setVistaActiva] = useState("inicio");
+
+  // Según el estado muestra una vista u otra
+  const renderVista = () => {
+    switch (vistaActiva) {
+      case "inicio":  return <Inicio onCambiarVista={setVistaActiva} />;
+      case "juegos":  return <Juegos />;
+      case "ranking": return <Ranking />;
+      case "perfil":  return <Perfil />;
+      default:        return <Inicio onCambiarVista={setVistaActiva} />;
+    }
+  };
 
   return (
-<>
-    <div>
-      <h1>Lista de Miembros del Equipo</h1>
-      <div className="contenedor-cards">
-        {usuarios.map((user) => (
-          <UsuarioCard
-          key={user.id}
-          nombre={user.nombre}
-          rol={user.rol}
-          />
-        ))}
-        </div>
-        </div>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="app">
+      <Navbar
+        vistaActiva={vistaActiva}
+        onCambiarVista={setVistaActiva}
+      />
+      <main className="app__main">
+        {renderVista()}
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
