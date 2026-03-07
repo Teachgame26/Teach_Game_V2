@@ -3,15 +3,11 @@ import { USUARIOS, JUEGOS } from "../data/mockData";
 import "./Perfil.css";
 
 function Perfil() {
-  // Estado del usuario logueado (usamos el primero de la lista)
   const [usuario, setUsuario] = useState(USUARIOS[0]);
   const [editando, setEditando] = useState(false);
   const [nuevoNombre, setNuevoNombre] = useState(USUARIOS[0].nombre);
-
-  // Historial de juegos del usuario
   const [historial] = useState(JUEGOS.slice(0, 4));
 
-  // Guarda el nuevo nombre
   const guardarNombre = () => {
     if (nuevoNombre.trim()) {
       setUsuario((prev) => ({ ...prev, nombre: nuevoNombre }));
@@ -19,8 +15,38 @@ function Perfil() {
     setEditando(false);
   };
 
+  // Nueva función para cambiar usuario completo
+  const cambiarUsuario = (nuevoUsuario) => {
+    setUsuario(nuevoUsuario);
+    setNuevoNombre(nuevoUsuario.nombre);
+    setEditando(false);
+  };
+
   return (
     <div className="perfil container">
+
+      {/* NUEVA SECCIÓN: Selector de usuario */}
+      <div className="perfil__selector-usuarios" style={{ marginBottom: "1rem" }}>
+        <h3>Cambiar Usuario</h3>
+        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+          {USUARIOS.map((u) => (
+            <button
+              key={u.id}
+              onClick={() => cambiarUsuario(u)}
+              style={{
+                padding: "0.5rem 1rem",
+                cursor: "pointer",
+                backgroundColor: u.id === usuario.id ? "#08f" : "#333",
+                color: "white",
+                border: "none",
+                borderRadius: "0.3rem",
+              }}
+            >
+              {u.nombre}
+            </button>
+          ))}
+        </div>
+      </div>
 
       {/* Tarjeta principal del usuario */}
       <div className="perfil__card">
@@ -69,9 +95,9 @@ function Perfil() {
       <div className="perfil__stats-grid">
         {[
           { label: "Juegos Jugados", val: usuario.juegosJugados, icon: "🎮" },
-          { label: "Nivel Actual",   val: usuario.nivel,         icon: "⚡" },
-          { label: "Racha Actual",   val: `${usuario.racha} días`, icon: "🔥" },
-          { label: "Ranking",        val: "#1",                  icon: "🏆" },
+          { label: "Nivel Actual", val: usuario.nivel, icon: "⚡" },
+          { label: "Racha Actual", val: `${usuario.racha} días`, icon: "🔥" },
+          { label: "Ranking", val: "#1", icon: "🏆" },
         ].map((s) => (
           <div className="perfil__stat-box" key={s.label}>
             <span className="perfil__stat-icon">{s.icon}</span>
@@ -97,7 +123,6 @@ function Perfil() {
           ))}
         </div>
       </div>
-
     </div>
   );
 }
