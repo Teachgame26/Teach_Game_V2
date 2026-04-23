@@ -1,7 +1,7 @@
 .footer {
-  margin-top: 80px;
+  margin-top: 40px; /* antes 80px (más compacto) */
   border-top: 1px solid var(--border);
-  padding: 32px 0;
+  padding: 16px 0; /* antes 32px */
   background: rgba(0,0,0,0.3);
 }
 
@@ -10,14 +10,14 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 10px; /* más reducido */
 }
 
 .footer__logo {
   font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 900;
-  letter-spacing: 2px;
+  font-size: 1rem; /* un poco más pequeño */
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 
 .footer__logo span {
@@ -26,11 +26,26 @@
 
 .footer__tagline {
   color: var(--text-muted);
-  font-size: 0.85rem;
-  margin-top: 4px;
+  font-size: 0.8rem;
+  margin-top: 2px;
 }
 
 .footer__copy {
   color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+/* NUEVO: contacto */
+.footer__contact {
+  color: var(--text-muted);
   font-size: 0.8rem;
+}
+
+.footer__contact a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+}
+
+.footer__contact a:hover {
+  text-decoration: underline;
 }
