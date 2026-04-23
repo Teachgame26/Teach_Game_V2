@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Navbar.css";
 
-function Navbar({ vistaActiva, onCambiarVista }) {
+function Navbar({ vistaActiva, onCambiarVista, onLogout }) {
   const [menuAbierto, setMenuAbierto] = useState(false);
 
   const links = [
@@ -35,10 +35,15 @@ function Navbar({ vistaActiva, onCambiarVista }) {
           ))}
         </ul>
 
-        {/* Usuario */}
+        {/* Usuario + Logout */}
         <div className="navbar__user">
           <div className="navbar__avatar">VG</div>
           <span className="navbar__username">Jugador_01</span>
+
+          {/* 🔥 BOTÓN CERRAR SESIÓN */}
+          <button className="navbar__logout" onClick={onLogout}>
+            Salir
+          </button>
         </div>
 
         {/* Botón menú mobile */}
@@ -58,11 +63,22 @@ function Navbar({ vistaActiva, onCambiarVista }) {
             <button
               key={link.id}
               className="navbar__mobile-link"
-              onClick={() => { onCambiarVista(link.id); setMenuAbierto(false); }}
+              onClick={() => {
+                onCambiarVista(link.id);
+                setMenuAbierto(false);
+              }}
             >
               {link.icono} {link.label}
             </button>
           ))}
+
+          {/* 🔥 Logout en mobile */}
+          <button
+            className="navbar__mobile-link"
+            onClick={onLogout}
+          >
+            🚪 Cerrar sesión
+          </button>
         </div>
       )}
     </nav>

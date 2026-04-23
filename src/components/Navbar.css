@@ -127,3 +127,17 @@
   .navbar__user { display: none; }
   .navbar__hamburger { display: block; }
 }
+
+.navbar__logout {
+  margin-left: 10px;
+  padding: 6px 10px;
+  background: transparent;
+  border: 1px solid #00e5ff;
+  color: #00e5ff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.navbar__logout:hover {
+  background: rgba(0, 229, 255, 0.1);
+}

@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Tarjeta */
+.auth-card {
+  background: #0f172a;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.1);
+}
+
+.auth-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-title span {
+  color: #00e5ff;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
+  background: #020617;
+  color: white;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 10px;
+  background: #00e5ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.auth-button:hover {
+  background: #00c8e0;
+}
+
+.auth-footer {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-link {
+  color: #00e5ff;
+  cursor: pointer;
+}
+
+
+/* Logo */
+.auth-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.auth-logo img {
+  width: 70px;
+  height: auto;
+}
