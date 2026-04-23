@@ -15,6 +15,13 @@ function Footer() {
         <div className="footer__copy">
           © 2025 TeachGame — Plataforma Estudiantil de Juegos
         </div>
+        
+        <div className="footer__contact">
+  Contacto:{" "}
+  <a href="mailto:teachgamec@gmail.com">
+    teachgamec@gmail.com
+  </a>
+</div>
       </div>
     </footer>
   );
