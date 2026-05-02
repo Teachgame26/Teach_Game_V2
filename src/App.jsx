@@ -7,11 +7,15 @@ import Ranking from "./views/Ranking";
 import Perfil from "./views/Perfil";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import TratamientoDatos from "./components/TratamientoDatos"; // 🆕 IMPORT
 import "./App.css";
 
 function App() {
   // 🔐 Estado de autenticación
   const [isAuth, setIsAuth] = useState(false);
+
+  // 🆕 Estado para tratamiento de datos
+  const [aceptoDatos, setAceptoDatos] = useState(false);
 
   // 🔁 Control login / register
   const [authVista, setAuthVista] = useState("login");
@@ -42,7 +46,12 @@ function App() {
     setVistaActiva("inicio");
   };
 
-  // 🔐 Pantallas de autenticación
+  // 🛑 PRIMERO: tratamiento de datos
+  if (!aceptoDatos) {
+    return <TratamientoDatos onAceptar={() => setAceptoDatos(true)} />;
+  }
+
+  // 🔐 DESPUÉS: autenticación
   if (!isAuth) {
     return authVista === "login" ? (
       <Login
