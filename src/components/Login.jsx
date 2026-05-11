@@ -1,57 +1,90 @@
 import { useState } from "react";
 import "../auth/auth.css";
-import logo from "../assets/logo.jpg"; // tu logo
+import logo from "../assets/logo.jpg";
+
 
 function Login({ onSwitch, onLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+
+  // 🔹 Nuevo estado para mensajes
+  const [message, setMessage] = useState("");
+  const [messageType, setMessageType] = useState(""); // success | error
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // 🔹 Validar campos vacíos
+
+    // Reset mensaje
+    setMessage("");
+
+
     if (!email || !password) {
-      alert("Completa todos los campos");
+      setMessage("Completa todos los campos");
+      setMessageType("error");
       return;
     }
 
-    // 🔹 Validar formato de correo
+
     if (!email.includes("@")) {
-      alert("Correo incorrecto");
+      setMessage("Correo incorrecto");
+      setMessageType("error");
       return;
     }
 
-    // 🔹 Validar contraseña
+
     if (password.length < 6) {
-      alert("La contraseña debe tener mínimo 6 caracteres");
+      setMessage("La contraseña debe tener mínimo 6 caracteres");
+      setMessageType("error");
       return;
     }
 
-    // 🔹 Simulación de datos correctos
+
     if (email === "maria@ejemplo.com" && password === "123456") {
-      alert("Bienvenido");
-      onLogin(); // entra a la app
+      setMessage("Bienvenido");
+      setMessageType("success");
+
+
+      // Simula ingreso a la app
+      setTimeout(() => {
+        onLogin();
+      }, 1000);
     } else {
-      alert("Datos incorrectos");
+      setMessage("Datos incorrectos");
+      setMessageType("error");
     }
 
-    // 👀 Mostrar en consola
+
     console.log("Email:", email);
     console.log("Password:", password);
   };
 
+
   return (
     <div className="auth-container">
       <div className="auth-card">
+
 
         {/* LOGO */}
         <div className="auth-logo">
           <img src={logo} alt="Logo" />
         </div>
 
+
         <h2 className="auth-title">
           Iniciar <span>Sesión</span>
         </h2>
+
+
+        {/* 🔹 Mensaje dentro del formulario */}
+        {message && (
+          <div className={`auth-message ${messageType}`}>
+            {message}
+          </div>
+        )}
+
 
         <form onSubmit={handleSubmit}>
           <input
@@ -62,6 +95,7 @@ function Login({ onSwitch, onLogin }) {
             onChange={(e) => setEmail(e.target.value)}
           />
 
+
           <input
             className="auth-input"
             type="password"
@@ -70,10 +104,12 @@ function Login({ onSwitch, onLogin }) {
             onChange={(e) => setPassword(e.target.value)}
           />
 
+
           <button className="auth-button" type="submit">
             Ingresar
           </button>
         </form>
+
 
         <div className="auth-footer">
           ¿No tienes cuenta?{" "}
@@ -85,5 +121,6 @@ function Login({ onSwitch, onLogin }) {
     </div>
   );
 }
+
 
 export default Login;
