@@ -62,7 +62,7 @@ export const JUEGOS = [
     color: "#c084fc",
     emoji: "📚",
     badge: null,
-    url: "https://www.education.com/games/reading/",
+    url: "https://www.cerebriti.com/juegos-de-literatura/mas-recientes/",
   },
   {
     id: 6,
@@ -75,7 +75,7 @@ export const JUEGOS = [
     color: "#fb923c",
     emoji: "🌍",
     badge: "HOT",
-    url: "https://www.education.com/games/geography/",
+    url: "https://www.seterra.com/es/",
   },
   {
     id: 7,
