@@ -23,7 +23,7 @@ export const JUEGOS = [
     color: "#ff2d78",
     emoji: "⚔️",
     badge: "NUEVO",
-    url: "https://www.education.com/games/history/",
+    url: "https://www.cerebriti.com/juegos-de-historia/",
   },
   {
     id: 3,
