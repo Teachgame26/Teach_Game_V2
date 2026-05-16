@@ -101,7 +101,7 @@ export const JUEGOS = [
     color: "#be185d",
     emoji: "🎨",
     badge: "NUEVO",
-    url: "https://www.sketchpad.net/",
+    url: "https://poki.com/es/dibujar?",
   },
 ];
 
