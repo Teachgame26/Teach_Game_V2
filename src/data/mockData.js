@@ -88,7 +88,7 @@ export const JUEGOS = [
     color: "#1e40af",
     emoji: "🌐",
     badge: "NUEVO",
-    url: "https://www.learnenglish.de/english-learning-games.html",
+    url: "https://duckenglish.com/",
   },
   {
     id: 8,
