@@ -34,7 +34,7 @@ function JuegosCard({ juego }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Jugar Ahora →
+          Explora Aquí →
         </a>
       </div>
 
