@@ -77,6 +77,32 @@ export const JUEGOS = [
     badge: "HOT",
     url: "https://www.education.com/games/geography/",
   },
+  {
+    id: 7,
+    titulo: "English Quest",
+    categoria: "Inglés",
+    dificultad: "Medio",
+    jugadores: 856,
+    rating: 4.6,
+    descripcion: "Aprende inglés mientras viajas por el mundo completando misiones lingüísticas.",
+    color: "#1e40af",
+    emoji: "🌐",
+    badge: "NUEVO",
+    url: "https://www.learnenglish.de/english-learning-games.html",
+  },
+  {
+    id: 8,
+    titulo: "Art Atelier",
+    categoria: "Dibujo",
+    dificultad: "Fácil",
+    jugadores: 923,
+    rating: 4.7,
+    descripcion: "Crea obras maestras digitales y participa en desafíos de arte con otros jugadores.",
+    color: "#be185d",
+    emoji: "🎨",
+    badge: "NUEVO",
+    url: "https://www.sketchpad.net/",
+  },
 ];
 
 export const USUARIOS = [
@@ -150,5 +176,5 @@ export const STATS_PLATAFORMA = [
 ];
 
 export const CATEGORIAS = [
-  "Todos", "Matemáticas", "Historia", "Biología", "Física", "Literatura", "Geografía"
+  "Todos", "Matemáticas", "Historia", "Biología", "Física", "Literatura", "Geografía", "Inglés", "Dibujo"
 ];
