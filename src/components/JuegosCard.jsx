@@ -3,8 +3,6 @@ import "./JuegosCard.css";
 function JuegosCard({ juego }) {
   const { titulo, categoria, dificultad, jugadores, rating, descripcion, color, emoji, badge } = juego;
 
-  
-
   return (
     <article className="juego-card" style={{ "--card-color": color }}>
 

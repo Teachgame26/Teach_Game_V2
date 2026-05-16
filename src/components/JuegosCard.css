@@ -7,12 +7,14 @@
   display: flex;
   flex-direction: column;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  transform-style: preserve-3d;
   animation: fadeInUp 0.5s ease both;
 }
 
 .juego-card:hover {
   transform: translateY(-6px);
   border-color: var(--card-color, var(--accent-cyan));
+  animation: popOut 700ms cubic-bezier(.2,.9,.2,1) both;
 }
 
 /* Badge */
@@ -114,4 +116,24 @@
 .juego-card__btn:hover {
   background: var(--card-color, var(--accent-cyan));
   color: #000;
+}
+
+/* Pop-out 3D animation when a card is selected */
+.juego-card--pop {
+  animation: popOut 700ms cubic-bezier(.2,.9,.2,1) both;
+}
+
+@keyframes popOut {
+  0% {
+    transform: translateZ(0) translateY(0) rotateX(0) scale(1);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+  45% {
+    transform: translateZ(40px) translateY(-12px) rotateX(-6deg) scale(1.03);
+    box-shadow: 0 28px 60px rgba(0,0,0,0.18);
+  }
+  100% {
+    transform: translateZ(0) translateY(0) rotateX(0) scale(1);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
 }
