@@ -10,6 +10,7 @@ export const JUEGOS = [
     color: "#00f5ff",
     emoji: "🧮",
     badge: "POPULAR",
+    url: "https://www.mathplayground.com/",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const JUEGOS = [
     color: "#ff2d78",
     emoji: "⚔️",
     badge: "NUEVO",
+    url: "https://www.education.com/games/history/",
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ export const JUEGOS = [
     color: "#00ff87",
     emoji: "🧬",
     badge: "TOP RATED",
+    url: "https://kids.nationalgeographic.com/games/",
   },
   {
     id: 4,
@@ -46,6 +49,7 @@ export const JUEGOS = [
     color: "#ffd700",
     emoji: "⚡",
     badge: null,
+    url: "https://www.physicsgames.net/",
   },
   {
     id: 5,
@@ -58,6 +62,7 @@ export const JUEGOS = [
     color: "#c084fc",
     emoji: "📚",
     badge: null,
+    url: "https://www.education.com/games/reading/",
   },
   {
     id: 6,
@@ -70,6 +75,7 @@ export const JUEGOS = [
     color: "#fb923c",
     emoji: "🌍",
     badge: "HOT",
+    url: "https://www.education.com/games/geography/",
   },
 ];
 

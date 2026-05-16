@@ -31,9 +31,14 @@ function JuegosCard({ juego }) {
           <span>⭐ {rating}</span>
         </div>
 
-        <button className="juego-card__btn">
+        <a
+          className="juego-card__btn"
+          href={juego.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Jugar Ahora →
-        </button>
+        </a>
       </div>
 
     </article>
