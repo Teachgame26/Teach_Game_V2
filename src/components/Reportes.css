@@ -1,10 +1,35 @@
 .reportes-container {
-  padding: 20px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.card-reporte {
-  border: 1px solid #ddd;
+.reportes-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.reportes-descripcion {
+  text-align: justify;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.reporte-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reporte-card h2 {
+  margin-bottom: 20px;
+}
+
+.reporte-imagen {
+  width: 100%;
+  max-width: 1000px;
+  display: block;
+  margin: 0 auto;
   border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 10px;
 }
