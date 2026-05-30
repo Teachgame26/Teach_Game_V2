@@ -1,0 +1,10 @@
+.reportes-container {
+  padding: 20px;
+}
+
+.card-reporte {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+}

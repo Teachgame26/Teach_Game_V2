@@ -8,6 +8,7 @@ import Perfil from "./views/Perfil";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import TratamientoDatos from "./components/TratamientoDatos"; // 🆕 IMPORT
+import Reportes from "./pages/Reportes";
 import "./App.css";
 
 function App() {

@@ -9,6 +9,8 @@ function Navbar({ vistaActiva, onCambiarVista, onLogout }) {
     { id: "juegos",  label: "Juegos",   icono: "🎮" },
     { id: "ranking", label: "Ranking",  icono: "🏆" },
     { id: "perfil",  label: "Mi Perfil", icono: "👤" },
+    { id: "reportes", label: "Reportes", icono: "📊" },
+
   ];
 
   return (
