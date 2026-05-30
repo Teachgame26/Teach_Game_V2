@@ -7,8 +7,9 @@ import Ranking from "./views/Ranking";
 import Perfil from "./views/Perfil";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import TratamientoDatos from "./components/TratamientoDatos"; // 🆕 IMPORT
-import Reportes from "./components/Reportes";
+import TratamientoDatos from "./components/TratamientoDatos";
+import Reportes from "./components/Reportes"; // 👈 NUEVO IMPORT
+
 import "./App.css";
 
 function App() {
@@ -29,12 +30,19 @@ function App() {
     switch (vistaActiva) {
       case "inicio":
         return <Inicio onCambiarVista={setVistaActiva} />;
+
       case "juegos":
         return <Juegos />;
+
       case "ranking":
         return <Ranking />;
+
       case "perfil":
         return <Perfil />;
+
+      case "reportes":
+        return <Reportes />;
+
       default:
         return <Inicio onCambiarVista={setVistaActiva} />;
     }
